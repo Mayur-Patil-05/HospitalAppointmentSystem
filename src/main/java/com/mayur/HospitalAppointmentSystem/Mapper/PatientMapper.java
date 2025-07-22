@@ -1,0 +1,38 @@
+package com.mayur.HospitalAppointmentSystem.Mapper;
+
+import com.mayur.HospitalAppointmentSystem.Dto.AppointmentDto;
+import com.mayur.HospitalAppointmentSystem.Dto.PatientDto;
+import com.mayur.HospitalAppointmentSystem.Model.Appointment;
+import com.mayur.HospitalAppointmentSystem.Model.Patient;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class PatientMapper {
+    public static PatientDto toPatientDto(Patient patient) {
+        PatientDto patientDto = new PatientDto();
+        patientDto.setPatientId(patient.getPatientId());
+        patientDto.setName(patient.getName());
+        patientDto.setGender(patient.getGender());
+        patientDto.setDob(patient.getDob());
+        patientDto.setPhoneNumber(patient.getPhoneNumber());
+        patientDto.setAddress(patient.getAddress());
+        patientDto.setRegistrationDate(patient.getRegistrationDate());
+        patientDto.setAppointments(patient.getAppointments().stream().map(Appointment::getAppointmentId).toList());
+        return patientDto;
+    }
+
+
+    public static Patient toPatientEntity(PatientDto patientDto) {
+        Patient patient = new Patient();
+        patient.setPatientId(patientDto.getPatientId());
+        patient.setName(patientDto.getName());
+        patient.setGender(patientDto.getGender());
+        patient.setDob(patientDto.getDob());
+        patient.setPhoneNumber(patientDto.getPhoneNumber());
+        patient.setAddress(patientDto.getAddress());
+        patient.setRegistrationDate(patientDto.getRegistrationDate());
+        return patient;
+    }
+}
