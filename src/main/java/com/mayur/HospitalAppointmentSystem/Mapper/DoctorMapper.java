@@ -18,7 +18,6 @@ public class DoctorMapper {
 
     public static Doctor toEntity(DoctorDto doctorDto) {
         Doctor doctor = new Doctor();
-        doctor.setDoctorId(doctorDto.getDoctorId());
         doctor.setName(doctorDto.getName());
         doctor.setSpecialization(doctorDto.getSpecialization());
         doctor.setPhone(doctorDto.getPhone());

@@ -17,7 +17,6 @@ public class PrescriptionMapper {
 
     public static Prescription toEntity(PrescriptionDto prescriptionDto) {
         Prescription prescription = new Prescription();
-        prescription.setPrescriptionId(prescriptionDto.getPrescriptionId());
         prescription.setMedicineName(prescriptionDto.getMedicineName());
         prescription.setDosage(prescriptionDto.getDosage());
         prescription.setFrequency(prescriptionDto.getFrequency());

@@ -18,7 +18,6 @@ public class AppointmentMapper {
 
     public static Appointment toEntity(AppointmentDto appointmentDto) {
         Appointment appointment = new Appointment();
-        appointment.setAppointmentId(appointmentDto.getAppointmentId());
         appointment.setAppointmentDate(appointmentDto.getAppointmentDate());
         appointment.setAppointmentTime(appointmentDto.getAppointmentTime());
         appointment.setAppointmentStatus(appointmentDto.getAppointmentStatus());

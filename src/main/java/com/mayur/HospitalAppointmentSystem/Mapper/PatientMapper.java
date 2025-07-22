@@ -28,7 +28,6 @@ public class PatientMapper {
 
     public static Patient toPatientEntity(PatientDto patientDto) {
         Patient patient = new Patient();
-        patient.setPatientId(patientDto.getPatientId());
         patient.setName(patientDto.getName());
         patient.setGender(patientDto.getGender());
         patient.setDob(patientDto.getDob());
