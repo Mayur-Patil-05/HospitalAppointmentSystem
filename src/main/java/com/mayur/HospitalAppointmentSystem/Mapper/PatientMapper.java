@@ -5,6 +5,7 @@ import com.mayur.HospitalAppointmentSystem.Dto.PatientDto;
 import com.mayur.HospitalAppointmentSystem.Model.Appointment;
 import com.mayur.HospitalAppointmentSystem.Model.Patient;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -17,6 +18,7 @@ public class PatientMapper {
         patientDto.setGender(patient.getGender());
         patientDto.setDob(patient.getDob());
         patientDto.setPhoneNumber(patient.getPhoneNumber());
+        patientDto.setEmail(patient.getEmail());
         patientDto.setAddress(patient.getAddress());
         patientDto.setRegistrationDate(patient.getRegistrationDate());
         patientDto.setAppointments(patient.getAppointments().stream().map(Appointment::getAppointmentId).toList());
@@ -31,8 +33,9 @@ public class PatientMapper {
         patient.setGender(patientDto.getGender());
         patient.setDob(patientDto.getDob());
         patient.setPhoneNumber(patientDto.getPhoneNumber());
+        patient.setEmail(patientDto.getEmail());
         patient.setAddress(patientDto.getAddress());
-        patient.setRegistrationDate(patientDto.getRegistrationDate());
+        patient.setRegistrationDate(LocalDate.now());
         return patient;
     }
 }
