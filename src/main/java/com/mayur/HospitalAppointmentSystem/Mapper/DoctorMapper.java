@@ -12,7 +12,6 @@ public class DoctorMapper {
         doctorDto.setSpecialization(doctor.getSpecialization());
         doctorDto.setPhone(doctor.getPhone());
         doctorDto.setEmail(doctor.getEmail());
-        doctorDto.setAppointments(doctor.getAppointments().stream().map(Appointment::getAppointmentId).toList());
         return doctorDto;
     }
 

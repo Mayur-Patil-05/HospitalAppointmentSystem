@@ -1,6 +1,8 @@
 package com.mayur.HospitalAppointmentSystem.Mapper;
 
 import com.mayur.HospitalAppointmentSystem.Dto.AppointmentDto;
+import com.mayur.HospitalAppointmentSystem.Dto.DoctorDto;
+import com.mayur.HospitalAppointmentSystem.Dto.PatientDto;
 import com.mayur.HospitalAppointmentSystem.Model.Appointment;
 
 import java.time.LocalDate;
@@ -15,6 +17,7 @@ public class AppointmentMapper {
         appointmentDto.setAppointmentStatus(appointment.getAppointmentStatus());
         appointmentDto.setPatientDto(PatientMapper.toPatientDto(appointment.getPatient()));
         appointmentDto.setDoctorDto(DoctorMapper.toDto(appointment.getDoctor()));
+        appointmentDto.setPrescriptionDto(PrescriptionMapper.toDto(appointment.getPrescription()));
         return appointmentDto;
     }
 

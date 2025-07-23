@@ -17,7 +17,6 @@ public class PatientMapper {
         patientDto.setEmail(patient.getEmail());
         patientDto.setAddress(patient.getAddress());
         patientDto.setRegistrationDate(patient.getRegistrationDate());
-        patientDto.setAppointments(patient.getAppointments().stream().map(Appointment::getAppointmentId).toList());
         return patientDto;
     }
 
