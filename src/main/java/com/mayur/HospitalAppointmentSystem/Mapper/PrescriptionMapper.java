@@ -11,7 +11,9 @@ public class PrescriptionMapper {
         prescriptionDto.setDosage(prescription.getDosage());
         prescriptionDto.setFrequency(prescription.getFrequency());
         prescriptionDto.setDuration(prescription.getDuration());
-        prescriptionDto.setAppointmentDto(AppointmentMapper.toAppointmentDto(prescription.getAppointment()));
+        if (prescription.getAppointment() != null) {
+            prescriptionDto.setAppointmentDto(AppointmentMapper.toAppointmentDto(prescription.getAppointment()));
+        }
         return prescriptionDto;
     }
 
@@ -21,7 +23,9 @@ public class PrescriptionMapper {
         prescription.setDosage(prescriptionDto.getDosage());
         prescription.setFrequency(prescriptionDto.getFrequency());
         prescription.setDuration(prescriptionDto.getDuration());
-        prescription.setAppointment(AppointmentMapper.toEntity(prescriptionDto.getAppointmentDto()));
+        if (prescriptionDto.getAppointmentDto() != null) {
+            prescription.setAppointment(AppointmentMapper.toEntity(prescriptionDto.getAppointmentDto()));
+        }
         return prescription;
     }
 }
