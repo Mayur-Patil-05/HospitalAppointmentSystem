@@ -1,10 +1,6 @@
 package com.mayur.HospitalAppointmentSystem.Dto;
 
 import com.mayur.HospitalAppointmentSystem.Model.AppointmentStatus;
-import com.mayur.HospitalAppointmentSystem.Model.Doctor;
-import com.mayur.HospitalAppointmentSystem.Model.Patient;
-import com.mayur.HospitalAppointmentSystem.Model.Prescription;
-import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

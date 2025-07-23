@@ -1,11 +1,6 @@
 package com.mayur.HospitalAppointmentSystem.Dto;
 
-import com.mayur.HospitalAppointmentSystem.Model.Appointment;
 import com.mayur.HospitalAppointmentSystem.Model.Gender;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.OneToMany;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

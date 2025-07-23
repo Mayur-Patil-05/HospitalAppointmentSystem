@@ -1,14 +1,10 @@
 package com.mayur.HospitalAppointmentSystem.Mapper;
 
-import com.mayur.HospitalAppointmentSystem.Dto.AppointmentDto;
 import com.mayur.HospitalAppointmentSystem.Dto.PatientDto;
 import com.mayur.HospitalAppointmentSystem.Model.Appointment;
 import com.mayur.HospitalAppointmentSystem.Model.Patient;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class PatientMapper {
     public static PatientDto toPatientDto(Patient patient) {

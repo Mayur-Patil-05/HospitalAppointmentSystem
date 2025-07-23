@@ -1,13 +1,7 @@
 package com.mayur.HospitalAppointmentSystem.Controller;
 
 import com.mayur.HospitalAppointmentSystem.Dto.AppointmentDto;
-import com.mayur.HospitalAppointmentSystem.Dto.DoctorDto;
-import com.mayur.HospitalAppointmentSystem.Exception.AppointmentNotFoundException;
-import com.mayur.HospitalAppointmentSystem.Mapper.AppointmentMapper;
-import com.mayur.HospitalAppointmentSystem.Model.Appointment;
 import com.mayur.HospitalAppointmentSystem.Service.AppointmentService;
-import com.mayur.HospitalAppointmentSystem.Service.DoctorService;
-import com.mayur.HospitalAppointmentSystem.Service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;

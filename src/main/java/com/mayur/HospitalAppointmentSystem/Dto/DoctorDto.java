@@ -1,9 +1,5 @@
 package com.mayur.HospitalAppointmentSystem.Dto;
 
-import com.mayur.HospitalAppointmentSystem.Model.Appointment;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.OneToMany;
-
 import java.util.ArrayList;
 import java.util.List;
 

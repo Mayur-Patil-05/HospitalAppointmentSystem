@@ -1,9 +1,5 @@
 package com.mayur.HospitalAppointmentSystem.Dto;
 
-import com.mayur.HospitalAppointmentSystem.Model.Appointment;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
-
 public class PrescriptionDto {
     private Long prescriptionId;
     private String medicineName;
